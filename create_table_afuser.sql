@@ -1,4 +1,4 @@
-drop table afuser;
+
 create table afuser
 (
  autoid number,
@@ -13,4 +13,8 @@ create table afuser
  LASTCHANGE DATE default sysdate,
  DESCRIPTION      VARCHAR2(1000)
 );
+
+create index AFUSER_IDX_AUTOID on afuser (autoid);
+create index AFUSER_IDX_AFACCTNO on afuser (afacctno);
+
 create sequence seq_afuser;
